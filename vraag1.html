@@ -9,15 +9,46 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
-
+        #linkercolom{
+            background-color: aqua;
+            padding:12px;
+        }
     </style>
     <script>
-
+        function gaan(){
+            var plaatjeplaceholder = document.getElementById("mijnplaatje");
+            plaatjeplaceholder.src = "img/0080.jpg";
+        }
     </script>
 </head>
 <body>
     <div class="jumbotron text-center"> iets </div>
-    <span>go2</span>
+    <div class=container>
+        <div class=row>
+            <div class="col-sm-3">
+                <div id="linkercolom">
+                    <input class=form-control>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-primary" onclick=gaan()>Klik mij</button>
+                
+            </div>
+            <div class="col-sm-6">
+                <h1>My Icons <i class="fas fa-heart"></i></h1>
+                <img src=1.jpg id=mijnplaatje>
+                <textarea></textarea>
+            </div>
+        </div>
+        <div class=row>
+            <div class="col-sm-12">
+                <div>
+                    Een lang verhaal
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
