@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: red;
+            padding: 12px;
+            border: 7px solid blue;
+            opacity: 0.7;
+        }
+        button:hover{
+            background-color: green;
+        }
+    </style>
+    <script>
+        function zoekKattenFeitje(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function (){
+                if(this.readyState == 4){
+                    var antwoord = this.responseText;
+                    var hetantwoordobject = JSON.parse(antwoord);
+                    document.getElementById("eindresultaat").innerHTML = hetantwoordobject.fact;
+                }
+            }
+            xhr.open("GET","https://catfact.ninja/fact", true);
+            xhr.send();
+            h
+        }
+    </script>
+</head>
+<body>
+    <button onclick=zoekKattenFeitje() >Klik hier</button>
+    <div id=eindresultaat>Hier komt het kattenfeitje</div>
+
+</body>
+</html>
